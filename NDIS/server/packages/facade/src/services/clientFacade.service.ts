@@ -1,6 +1,6 @@
 import { ClientService } from '@client/services';
-import { CreateClientDto } from '@client/dto/CreateClientDto';
-import { UpdateClientDto } from '@client/dto/UpdateClientDto';
+import type { CreateClientDto } from '@client/dto/CreateClientDto';
+import type { UpdateClientDto } from '@client/dto/UpdateClientDto';
 
 export class ClientFacadeService {
   private clientService = new ClientService();

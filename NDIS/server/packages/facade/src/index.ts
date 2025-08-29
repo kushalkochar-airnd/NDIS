@@ -1,4 +1,6 @@
+
 import express from 'express';
+import cors from 'cors';
 
 import { Router, Request, Response } from 'express';
 import { ClientFacadeService } from './services/clientFacade.service';
@@ -54,7 +56,9 @@ rosterRouter.delete('/:id', async (req: Request, res: Response) => {
 });
 
 
+
 const app = express();
+app.use(cors({ origin: 'http://localhost:4200' })); // Enable CORS for all origins
 app.use(express.json());
 app.use('/api/clients', clientRouter);
 app.use('/api/rosters', rosterRouter);
