@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:all": "npm run build --workspaces",
+    "tsc:build": "tsc --build",
+    "start:facade": "npm run dev --workspace=facade"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "tsconfig-paths": "^4.2.0"
+  }
+}

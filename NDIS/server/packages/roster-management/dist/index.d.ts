@@ -1,0 +1,9 @@
+import './services';
+import './services/auditLog.service';
+import './services/leaveRequest.service';
+import './services/location.service';
+import './services/role.service';
+import './services/roster.service';
+import './services/shift.service';
+import './services/user.service';
+import './services/roster.service';

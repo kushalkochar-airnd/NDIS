@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/client-management" },
+    { "path": "./packages/roster-management" },
+    { "path": "./packages/facade" }
+  ]
+}

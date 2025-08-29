@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+  "baseUrl": ".",
+    "paths": {
+  "@client/services": ["../client-management/dist/services/index.js"],
+  "@roster-management/services": ["../roster-management/dist/services/index.js"],
+  "@client/dto/CreateClientDto": ["../client-management/dist/dto/CreateClientDto.js"],
+  "@client/dto/UpdateClientDto": ["../client-management/dist/dto/UpdateClientDto.js"]
+    }
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../client-management" },
+    { "path": "../roster-management" }
+  ],
+  "exclude": ["node_modules"]
+}

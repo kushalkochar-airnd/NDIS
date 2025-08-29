@@ -1,0 +1,71 @@
+{
+  "info": {
+    "_postman_id": "facade-ndis-collection-2025",
+    "name": "NDIS Facade API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Clients",
+      "item": [
+        { "name": "Create Client", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"dateOfBirth\": \"1990-01-01\",\n  \"gender\": \"male\",\n  \"ndisNumber\": \"123456\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"0400000000\"\n}" }, "url": { "raw": "{{baseUrl}}/api/clients", "host": ["{{baseUrl}}"], "path": ["api", "clients"] } } },
+        { "name": "Get All Clients", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/clients", "host": ["{{baseUrl}}"], "path": ["api", "clients"] } } },
+        { "name": "Get Client By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/clients/{{clientId}}", "host": ["{{baseUrl}}"], "path": ["api", "clients", "{{clientId}}"] } } },
+        { "name": "Update Client", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"firstName\": \"Jane\"\n}" }, "url": { "raw": "{{baseUrl}}/api/clients/{{clientId}}", "host": ["{{baseUrl}}"], "path": ["api", "clients", "{{clientId}}"] } } }
+      ]
+    },
+    {
+      "name": "Rosters",
+      "item": [
+        { "name": "Create Roster", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"weekStart\": \"2025-08-25\",\n  \"weekEnd\": \"2025-08-31\"\n}" }, "url": { "raw": "{{baseUrl}}/api/rosters", "host": ["{{baseUrl}}"], "path": ["api", "rosters"] } } },
+        { "name": "Get All Rosters", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/rosters", "host": ["{{baseUrl}}"], "path": ["api", "rosters"] } } },
+        { "name": "Get Roster By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/rosters/{{rosterId}}", "host": ["{{baseUrl}}"], "path": ["api", "rosters", "{{rosterId}}"] } } },
+        { "name": "Update Roster", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"published\": true\n}" }, "url": { "raw": "{{baseUrl}}/api/rosters/{{rosterId}}", "host": ["{{baseUrl}}"], "path": ["api", "rosters", "{{rosterId}}"] } } }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        { "name": "Create User", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"role\": \"employee\"\n}" }, "url": { "raw": "{{baseUrl}}/api/users", "host": ["{{baseUrl}}"], "path": ["api", "users"] } } },
+        { "name": "Get All Users", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/users", "host": ["{{baseUrl}}"], "path": ["api", "users"] } } },
+        { "name": "Get User By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/users/{{userId}}", "host": ["{{baseUrl}}"], "path": ["api", "users", "{{userId}}"] } } },
+        { "name": "Update User", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Jane Doe\"\n}" }, "url": { "raw": "{{baseUrl}}/api/users/{{userId}}", "host": ["{{baseUrl}}"], "path": ["api", "users", "{{userId}}"] } } }
+      ]
+    },
+    {
+      "name": "Shifts",
+      "item": [
+        { "name": "Create Shift", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"date\": \"2025-08-28\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"17:00\",\n  \"location\": \"Office A\"\n}" }, "url": { "raw": "{{baseUrl}}/api/shifts", "host": ["{{baseUrl}}"], "path": ["api", "shifts"] } } },
+        { "name": "Get All Shifts", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/shifts", "host": ["{{baseUrl}}"], "path": ["api", "shifts"] } } },
+        { "name": "Get Shift By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/shifts/{{shiftId}}", "host": ["{{baseUrl}}"], "path": ["api", "shifts", "{{shiftId}}"] } } },
+        { "name": "Update Shift", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"location\": \"Office B\"\n}" }, "url": { "raw": "{{baseUrl}}/api/shifts/{{shiftId}}", "host": ["{{baseUrl}}"], "path": ["api", "shifts", "{{shiftId}}"] } } }
+      ]
+    },
+    {
+      "name": "Roles",
+      "item": [
+        { "name": "Create Role", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Manager\",\n  \"permissions\": [\"create_shift\", \"edit_shift\"]\n}" }, "url": { "raw": "{{baseUrl}}/api/roles", "host": ["{{baseUrl}}"], "path": ["api", "roles"] } } },
+        { "name": "Get All Roles", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/roles", "host": ["{{baseUrl}}"], "path": ["api", "roles"] } } },
+        { "name": "Get Role By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/roles/{{roleId}}", "host": ["{{baseUrl}}"], "path": ["api", "roles", "{{roleId}}"] } } },
+        { "name": "Update Role", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Supervisor\"\n}" }, "url": { "raw": "{{baseUrl}}/api/roles/{{roleId}}", "host": ["{{baseUrl}}"], "path": ["api", "roles", "{{roleId}}"] } } }
+      ]
+    },
+    {
+      "name": "Leave Requests",
+      "item": [
+        { "name": "Create Leave Request", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"startDate\": \"2025-08-29\",\n  \"endDate\": \"2025-08-31\",\n  \"type\": \"annual\"\n}" }, "url": { "raw": "{{baseUrl}}/api/leave-requests", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests"] } } },
+        { "name": "Get All Leave Requests", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/leave-requests", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests"] } } },
+        { "name": "Get Leave Request By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "{{leaveRequestId}}"] } } },
+        { "name": "Update Leave Request", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"status\": \"approved\"\n}" }, "url": { "raw": "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "{{leaveRequestId}}"] } } }
+      ]
+    },
+    {
+      "name": "Audit Logs",
+      "item": [
+        { "name": "Create Audit Log", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\n  \"action\": \"login\",\n  \"userId\": \"{{userId}}\",\n  \"timestamp\": \"2025-08-29T10:00:00Z\"\n}" }, "url": { "raw": "{{baseUrl}}/api/audit-logs", "host": ["{{baseUrl}}"], "path": ["api", "audit-logs"] } } },
+        { "name": "Get All Audit Logs", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/audit-logs", "host": ["{{baseUrl}}"], "path": ["api", "audit-logs"] } } },
+        { "name": "Get Audit Log By ID", "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/audit-logs/{{auditLogId}}", "host": ["{{baseUrl}}"], "path": ["api", "audit-logs", "{{auditLogId}}"] } } }
+      ]
+    }
+  ]
+}
