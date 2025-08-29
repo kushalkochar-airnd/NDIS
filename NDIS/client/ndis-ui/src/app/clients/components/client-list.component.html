@@ -1,0 +1,9 @@
+<div class="p-4">
+  <h2 class="text-2xl font-bold mb-4">Client List</h2>
+  <ul class="divide-y divide-gray-200">
+    <li *ngFor="let client of clients$ | async" class="py-2 flex justify-between items-center">
+      <span class="font-medium">{{ client.name }}</span>
+      <span class="text-gray-500">{{ client.email }}</span>
+    </li>
+  </ul>
+</div>
